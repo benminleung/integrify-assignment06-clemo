@@ -1,0 +1,362 @@
+body, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;  
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+h4 {
+}
+
+p {
+    font-size: 1em;
+    font-weight: 400;
+    opacity: .7;
+}
+
+.ctaButton {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 1.2em;
+    line-height: 0;
+}
+
+.ctaButton:hover {
+    opacity: .8;
+}
+
+.ctaButton:active {
+    border: 2px unset white;
+    opacity: .7;
+}
+
+.container {
+    margin: 0 5vw;
+    padding: 7vh 0;
+}
+
+.pageMargin >* {
+    margin: 0 3vw;
+}
+
+.flexRow {
+    display: flex;
+    flex-flow: row;
+}
+
+.pagination .pageBullet {
+    transform: rotate(45deg);
+    height: .5em;
+    width: .5em;
+    border: 1px solid black;
+}
+
+.pagination .active {
+    border-color: white;
+    background-color: white;
+}
+
+.pagination .pageBullet:not(.active):hover{
+    background-color: rgba(255, 255, 255, 0.702);
+}
+
+.fixed {
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+
+.header {
+    background-color:#fff;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .2);
+    z-index: 999;
+}
+
+.header-bar {
+    top: 0;
+    left: 0;
+    padding-top:0;
+    grid-column: main;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+}
+
+.header-bar >* {
+    margin: 2em 0;
+}
+
+.header-bar .nav{
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content max-content;
+    grid-column-gap: 2em;
+}
+
+.header .container{
+    padding-bottom: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: [main] 100% [main];
+    grid-auto-rows: auto;
+    width: 100vw;
+}
+
+.sec {
+    grid-column: main;
+}
+
+.sec1 .container {
+    background: linear-gradient(rgba(255, 225, 189, 0.9), rgba(255, 225, 189, 0.9)), url("src/homebg.jpg");
+    background-size: cover;
+    padding: 1em;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 0fr auto 0fr;
+    grid-template-rows: 20vh 0fr 20vh;
+    justify-content: space-between;
+}
+
+.sec1 .container .pagination {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 1vw;
+}
+
+.sec1 .container .items{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-rows: auto auto auto 2vw auto;
+    justify-items: center;
+    grid-row-gap: 1em;
+}
+
+.sec2 {
+    background-color: #F9F9F9;
+}
+
+.sec2 .container {
+    display: grid;
+    grid-template-areas: 
+        "title title title title"
+        "image1 image1 . article1"
+        "article2 . image2 image2"
+        "image3 image3 . article3";
+    grid-template-columns: 1fr 1vw 1vw 1fr;
+    grid-row-gap: 2em;
+    grid-column-gap: 1em;
+    text-align: center;
+}
+
+.sec2 .title {
+    grid-area: title;
+}
+
+.sec2 .article1{
+    grid-area: article1;
+}
+.sec2 .article2{
+    grid-area: article2;
+}
+.sec2 .article3{
+    grid-area: article3;
+}
+
+.sec2 .image1 {
+    grid-area: image1;
+}
+
+.sec2 .image2 {
+    grid-area: image2;
+}
+
+.sec2 .image3 {
+    grid-area: image3;
+}
+
+.sec2 .container > img {
+    grid-column-start: span 2;
+    width: 100%;
+}
+
+.sec2 .article {
+    display: grid;
+    grid-auto-rows: min-content;
+    text-align: left;
+    grid-gap: 1em 0;
+}
+
+.sec2 .ctaButton {
+    width: 8em;
+    color: black;
+    text-align: center;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.266);
+}
+
+.sec2 .ctaButton:hover {
+    background-color: rgba(0, 0, 0, 0.076);
+}
+
+.sec2 .textSpacRight {
+    display: grid;
+}
+
+.sec3 .container {
+    display: grid;
+    grid-template-areas:
+        "title title title"
+        "a b c"
+        "d b f"
+        "d e f"
+        "button button button";
+    grid-template-rows: 1fr 2fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3vw 3vw;
+    justify-items: center;
+    align-items: center;
+}
+
+.sec3 .container img {
+    width: 100%;
+
+}
+
+.sec3 .container .img1 {
+    grid-area: a;
+}
+
+.sec3 .container .img2 {
+    grid-area: b;
+}
+
+.sec3 .container .img3 {
+    grid-area: c;
+}
+
+.sec3 .container .img4 {
+    grid-area: d;
+}
+
+.sec3 .container .img5 {
+    grid-area: e;
+}
+
+.sec3 .container .img6 {
+    grid-area: f;
+}
+
+.sec3 .container .button {
+    grid-area: button;
+}
+
+.sec3 .container .title {
+    grid-area: title;
+}
+
+.sec4 {
+    background-color: rgb(255 225 189);
+}
+
+.sec4 .container {
+    display: grid;
+    grid-template-columns: 0fr 1fr 1fr 1fr 0fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 3em 1em;
+    align-items: center;
+    text-align: center;
+}
+
+.sec4 .container p {
+    margin-top: 1em;
+}
+
+.sec4 .container h1:not(.bt):hover{
+    color: white;
+    cursor: pointer;
+}
+
+.sec4 .container .bt{
+    grid-column: 1 /span 5;
+    grid-row: 1 / 2;
+}
+
+.sec4 .container .p1, .sec4 .container .p2, .sec4 .container .p3 {
+    align-self: start;
+}
+
+.sec4 .container .pagination {
+    grid-column: 1 /span 5;
+    grid-row: 3 /span 1;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    grid-column-gap: 1vw;
+}
+
+.sec5 {
+    justify-self: center;
+}
+
+.sec5 .container {
+    display: grid;
+    grid-template-areas: 
+        "title title"
+        "textLeft textRight"
+        "tempBoxes tempBoxes"
+        "pagination pagination";
+    grid-template-columns: 1fr 1fr; 
+    justify-items: center;
+    grid-gap: 2em;
+    max-width: 60rem;
+}
+
+.sec5 .title {
+    grid-area: title;
+}
+
+.sec5 .textLeft{
+    justify-self: right;
+    grid-area: textLeft;
+    display: grid;
+    justify-items: right;
+    grid-gap: .8em 0;
+}
+
+.sec5 .textRight{
+    grid-area: textRight;
+    justify-self: left;
+}
+
+.sec5 .tempBoxes {
+    grid-area: tempBoxes;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 1em;
+}
+
+.sec5 .tempBoxes img {
+    height: 5em;
+}
+
+.sec5 .pagination {
+    grid-area: pagination;
+}
