@@ -46,7 +46,7 @@ p {
 
 .container {
     margin: 0 5vw;
-    padding: 7vh 0;
+    padding: 8vh 0;
 }
 
 .pageMargin >* {
@@ -360,3 +360,61 @@ p {
 .sec5 .pagination {
     grid-area: pagination;
 }
+
+.sec6 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("src/tuchbg.jpg");
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.sec6 .container {
+    display:grid;
+    grid-template-areas:
+        "title title"
+        "info contactForm";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4em 2em;
+    justify-items: center;
+    max-width: 60rem;
+}
+
+.sec6 .title {
+    grid-area: title;
+}
+
+.sec6 .info {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: .5em;
+}
+
+.sec6 .socialMedia {
+    grid-column: span 2;
+}
+
+.sec6 .contactForm {
+    grid-area: contactForm;
+    justify-self: left;
+    display: grid;
+    justify-self: stretch;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 3em 0;
+}
+
+.sec6 .contactForm input, .textarea{
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: thin solid gray;
+    
+}
+
+
+
